@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="main-page">
+    <div id="navbar">
+        <sidebar>
+            <h1>My Mai</h1>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="chart.html"><i class="fa-solid fa-chart-pie"></i>Charts</a></li>
+                <li><a href="budget.html" style="color: #f1a129;"><i class="fa-solid fa-chart-line"></i>Budget</a></li>
+                <li><a href="expense.html"><i class="fa-solid fa-chart-simple"></i>Expense</a></li>
+            </ul>
+        </sidebar>
+    </div>
+    <section id="banner">
+        <div class="header">
+            <h1>Budget</h1>
+            <input type="search" name="search" id="search" placeholder="search">
+        </div>
+        <div id="board">
+            <div class="budget-board">
+                <div id="budget-board-create">
+                    <div class="budgetCreateHead">
+                        <h1>NEW BUDGET</h1>
+                        <i></i>
+                    </div>
+                    <div class="budgetCreateBoard">
+                        <div class="budgetCategoryInput">
+                            <select name="budgetCurrency" id="budgetCurrency">
+                                <option value="USD">USD</option>
+                                <option value="LRD">LRD</option>
+                            </select>
+                            <select name="budgetCategory" id="budgetCategory">
+                                <option value="Category">Select Category</option>
+                                <option value="Food/Drinks">Food/Drinks</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Transportation">Transportation</option>
+                                <option value="Health/Sport">Health/Sport</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Entertainment">Entertainment</option>
+                            </select>
+                            <input type="number" name="number" id="budgetAmount">
+                            <button id="budgetAdd">Add</button>
+                            <button id="currencyConverter">Convert</button>
+                        </div>
+                        <div class="budget-list">
+                            <h2>Budget List</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="budgetTableBody">
+
+                                </tbody>
+                                <tfoot>
+                                    <td>Total:</td>
+                                    <td id="budgetTotalAmount">0</td>
+                                    <td></td>
+                                    <td></td>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currency Converter Modal -->
+    <div id="currencyConverterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Currency Converter</h2>
+            <div class="converter">
+                <select name="fromCurrency" id="fromCurrency">
+                    <option value="USD">USD</option>
+                    <option value="LRD">LRD</option>
+                </select>
+                <select name="toCurrency" id="toCurrency">
+                    <option value="USD">USD</option>
+                    <option value="LRD">LRD</option>
+                </select>
+                <input type="number" name="amount" id="convertAmount" placeholder="Amount">
+                <button id="convertButton">Convert</button>
+                <div id="conversionResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/budget.js"></script>
+</body>
+</html>

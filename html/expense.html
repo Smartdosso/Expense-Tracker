@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="main-page">
+    <div id="navbar">
+        <sidebar>
+            <h1>My Mai</h1>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="chart.html" ><i class="fa-solid fa-chart-pie"></i>Charts</a></li>
+                
+                <li><a href="budget.html" ><i class="fa-solid fa-chart-line"></i>Budget</a></li>
+                <li><a href="expense.html" style="color: #f1a129;"><i class="fa-solid fa-chart-simple"></i>Expense</a></li>
+            </ul>
+        </sidebar>
+    </div>
+    <section id="banner">
+        <div class="header">
+            <h1>Expense</h1>
+            <input type="search" name="search" id="search" placeholder="search">
+            
+        </div>
+        <div id="board">
+            <div class="expense-board">
+            
+            <div id="expense-board-create">
+                <div class="expenseCreateHead">
+                    <h1>NEW EXPENSE</h1>
+                    <i></i>
+                </div>
+                <div class="expenseCreateBoard">
+                    <div class="expenseCategoryInput">
+                        <select name="expenseCategory" id="expenseCategory">
+                            <option value="Categoty">Select Category</option>
+                            <option value="Food/Drinks">Food/Drinks</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Health/Sport">Health/Sport</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Entertainment">Entertainment</option>
+                        </select>
+                        <input type="number" name="number" id="expenseAmount" placeholder="Amount">
+                        <input type="date" name="date" id="expenseDate">
+                        <button id="expenseAdd">Add</button>
+                    </div>
+                    <div class="expense-list">
+                        <h2>Expenses List</h2>
+                        <table>
+                            <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                            </thead>
+                            <tbody id="expenseTableBody">
+
+                            </tbody>
+                            <tfoot>
+                                <td>Total:</td>
+                                <td id="expenseTotalAmount">0</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- <button id="add-expense">
+            <i class="fa-solid fa-minus"></i>
+        </button> -->
+
+    </section>
+    <script src="../js/expense.js"></script>
+</body>
+</html>
