@@ -6,6 +6,7 @@
     <title>Charts</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body id="main-page">
     <div id="navbar">
@@ -13,7 +14,7 @@
             <h1>My Mai</h1>
             <ul>
                 <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
-                <li><a href="setting.html"><i class="fa-solid fa-gear"></i>Settiings</a></li>
+                <li><a href="setting.html"><i class="fa-solid fa-gear"></i>Settings</a></li>
                 <li><a href="budget.html"><i class="fa-solid fa-chart-line"></i>Budget</a></li>
                 <li><a href="expense.html"><i class="fa-solid fa-chart-simple"></i>Expense</a></li>
             </ul>
@@ -23,24 +24,20 @@
         <div class="header">
             <h1>Charts</h1>
             <input type="search" name="search" id="search" placeholder="search">
-            
         </div>
         <div id="board">
             <div class="chart-graph">
+                <div style="width: 300px;">
+                    <p>Weekly</p>
+                    <canvas id="weeklyChart" width="150" height="150"></canvas>
+                </div>
                 <div>
                     <p>This Month</p>
-                    <img src="../images/this month.png" alt="">
-                </div>
-                <div>
-                    <p>Weekly</p>
-                    <img src="../images/weekly.png" alt="Weekly">
-                </div>
-                <div>
-                    <p>Total Balance</p>
-                    <img src="../images/dashboard-graph.png" alt="Balance">
+                    <canvas id="monthlyChart" width="400" height="200"></canvas>
                 </div>
             </div>
         </div>
     </section>
+    <script src="../js/chart.js"></script>
 </body>
 </html>
