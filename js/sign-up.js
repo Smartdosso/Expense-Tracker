@@ -19,5 +19,5 @@ function saveData(event){
         localStorage.setItem("users",JSON.stringify(user_records));
         user_records.push(user);
 
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     }
